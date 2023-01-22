@@ -224,7 +224,7 @@ h3 {
 .stack {
   transition: all 0.5s;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 722px) {
   .stack {
     padding-bottom: 20%;
   }
