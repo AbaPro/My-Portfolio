@@ -15,8 +15,8 @@ let rose = new p5((sketch) => {
     sketch.textSize(15);
     sketch.noStroke();
     sketch.fill(255, 255, 255);
-    sketch.text("n Value : " + nS.value(), 10, 19);
-    sketch.text("d Value : " + dS.value(), sketch.width - 90, 19);
+    sketch.text("n Value : " + nS.value(), 30, 19);
+    sketch.text("d Value : " + dS.value(), sketch.width - 100, 19);
     sketch.translate(sketch.width / 2, sketch.height / 2);
     sketch.noFill();
     sketch.beginShape();
@@ -86,7 +86,7 @@ let seek = new p5((sketch) => {
   sketch.draw = () => {
     sketch.background(51);
     sketch.textSize(32);
-    sketch.text("Seek the target.", 50, 87);
+    sketch.text("Seek the target.", 70, 87);
     sketch.fill(255, 0, 255);
     sketch.noStroke();
     target = sketch.createVector(sketch.mouseX, sketch.mouseY);
