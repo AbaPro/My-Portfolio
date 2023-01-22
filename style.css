@@ -119,8 +119,8 @@ h3 {
   position: relataive;
 }
 .bi {
-  margin-left: 12px;
-  margin-right: 12px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 .bi:hover {
   transition: all 0.5s;
@@ -269,7 +269,7 @@ h3 {
     margin-right: -20px;
   }
   .imgr2 {
-    height: 65vh;
+    height: 60vh;
     margin-top: 20vh;
   }
   .abouttxt {
