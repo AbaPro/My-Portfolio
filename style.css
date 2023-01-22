@@ -5,6 +5,7 @@ canvas {
 * {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-weight: 600 !important;
 }
 .slide {
   font-size: 3vmin;
@@ -13,9 +14,12 @@ canvas {
 }
 p {
   font-size: 2.9vmin;
+  font-weight: 500;
 }
 h3 {
   font-size: 3.9vmin !important;
+  margin-top: 5% !important; 
+  overflow: hidden;
 }
 img {
   user-select: none;
@@ -130,7 +134,6 @@ img {
 }
 .abouttxt {
   position: relative;
-  font-weight: 600;
   padding: 3%;
   width: 66%;
   border-radius: 40px;
@@ -141,6 +144,9 @@ img {
 }
 .abouttxt:hover {
   transform: scale(1.1);
+}
+.ico{
+  height: 1.5rem;
 }
 .ico:hover {
   scale: 1.1;
@@ -216,18 +222,17 @@ h3 {
 .procon {
   padding: 3vh;
   margin-bottom: 15px;
-  border-radius: 10%;
-  width: 50vw;
+  border-radius: 5%;
+  width: min(700px,80vw);
   height: 88vh;
   background-color: rgb(51, 51, 51);
 }
 .stack {
   transition: all 0.5s;
+
 }
 @media screen and (max-width: 722px) {
-  .stack {
-    padding-bottom: 20%;
-  }
+
   .box {
     width: 70%;
   }
@@ -236,15 +241,15 @@ h3 {
   }
   .imgr {
     height: 75vh;
-    margin: 0px;
-    margin-right: -40px;
+    /* margin: 0px; */
+    margin-right: -60px;
   }
   .imgr2 {
     height: 65vh;
     margin-top: 20vh;
   }
   .abouttxt {
-    font-size: 19px;
+    font-size: 1.5rem;
     overflow: hidden;
   }
   .nw {
@@ -256,7 +261,6 @@ h3 {
   }
   .procon {
     margin-bottom: 15px;
-    border-radius: 10%;
     width: 90vw;
     height: 80vh;
   }
