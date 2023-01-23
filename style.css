@@ -7,11 +7,16 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p {
+  overflow: hidden;
   color: rgb(var(--secondary-color)) !important;
 }
 a {
   color: rgb(var(--secondary-color)) !important;
+}
+.form-control{
+  opacity: 0.5;
 }
 :root {
   --primary-color: 240, 240, 240;
@@ -56,12 +61,14 @@ h3 {
   margin-top: 5% !important;
   overflow: hidden;
 }
+
 #dark-icon:hover {
   scale: 1.2;
   filter: drop-shadow(0px black) !important;
 }
 .imgr,
 .imgr2 {
+  
   user-select: none;
   overflow: hidden;
   filter: drop-shadow(20px 4px rgba(var(--secondary-color), 0.05));
@@ -173,9 +180,9 @@ h3 {
   align-items: center;
   transition: all 0.5s;
 }
-.imgr2 {
-  height: 70vh;
+.imgr2{
   transition: all 0.5s;
+  height: 29vw;
 }
 .imgr2:hover {
   transform: translateY(-25px);
@@ -183,7 +190,7 @@ h3 {
 .abouttxt {
   position: relative;
   padding: 3%;
-  width: 66%;
+  width: 70%;
   border-radius: 20px;
   font-size: 3vw;
   color: rgb(var(--secondary-color));
@@ -237,10 +244,10 @@ h3 {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cd1c1c' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2386a7aa' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d6132f' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%235497ad' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23d9034b' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%232d86b9' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23d30c6c' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%232f6cbb' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23c20d8b' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23604bac' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa10aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23891789' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
   background-attachment: fixed;
   background-size: cover;
-  height: 110vh;
+  height: 120vh;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
 }
 .nw {
@@ -279,7 +286,21 @@ h3 {
 .stack {
   transition: all 0.5s;
 }
+.thanks{
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  margin-left: 5vw;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  
+}
 @media screen and (max-width: 722px) {
+  .thanks{
+    display:none;
+  }
   .box {
     width: 70%;
   }
@@ -290,21 +311,13 @@ h3 {
     height: 65vh;
     margin-right: -20px;
   }
-  .imgr2 {
-    height: 60vh;
-    margin-top: 20vh;
-  }
+ 
   .abouttxt {
     font-size: 1.5rem;
     overflow: hidden;
   }
-  .nw {
-    height: 60vh;
-  }
-  #contact {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+
+ 
   .procon {
     margin-bottom: 15px;
     width: 90vw;
