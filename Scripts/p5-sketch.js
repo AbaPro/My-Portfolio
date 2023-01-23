@@ -15,8 +15,8 @@ let rose = new p5((sketch) => {
     sketch.textSize(15);
     sketch.noStroke();
     sketch.fill(255, 255, 255);
-    sketch.text("n Value : " + nS.value(), 30, 19);
-    sketch.text("d Value : " + dS.value(), sketch.width - 100, 19);
+    sketch.text("n Value : " + nS.value(), 40, 19);
+    sketch.text("d Value : " + dS.value(), sketch.width - 120, 19);
     sketch.translate(sketch.width / 2, sketch.height / 2);
     sketch.noFill();
     sketch.beginShape();
