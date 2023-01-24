@@ -1,3 +1,42 @@
+:root {
+  --primary-color: 240, 240, 240;
+  --secondary-color: 51, 51, 51;
+  --accent-color: #c73a04;
+  --fill: url(Assets/animated-text-fill-dark.png);
+}
+.dark-theme {
+  --primary-color: 51, 51, 51;
+  --secondary-color: 240, 240, 240;
+  --accent-color: #099ce7;
+  --fill: url(Assets/animated-text-fill-light.png);
+}
+
+/* Loading Animation */
+.loading {
+  background-color: rgb(var(--primary-color));
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.preloader {
+  mix-blend-mode: difference;
+  width: min(200px, 50%);
+}
+.loadtitl {
+  mix-blend-mode: difference;
+  padding-block: 10px;
+  color: #29b6f6 !important;
+  font-weight: 800 !important;
+  letter-spacing: 4px;
+}
+
+/* ============ */
+
 canvas {
   display: block;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -15,32 +54,21 @@ p {
 a {
   color: rgb(var(--secondary-color)) !important;
 }
-.form-control{
+.form-control {
   opacity: 0.5;
-}
-:root {
-  --primary-color: 240, 240, 240;
-  --secondary-color: 51, 51, 51;
-  --fill:url(Assets/animated-text-fill-dark.png);
-}
-.dark-theme {
-  --primary-color: 51, 51, 51;
-  --secondary-color: 240, 240, 240;
-  --fill:url(Assets/animated-text-fill-light.png);
 }
 
 @keyframes anim {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   100% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
 }
 * {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  transition: all 0.5s;
   font-weight: 600 !important;
 }
 .btn {
@@ -57,18 +85,27 @@ p {
   font-weight: 500;
 }
 h3 {
-  font-size: 3.9vmin !important;
+  font-size: 3.8vmin !important;
   margin-top: 5% !important;
   overflow: hidden;
 }
+#dark-icon {
+  animation: rot 7s infinite linear;
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 #dark-icon:hover {
-  scale: 1.2;
-  filter: drop-shadow(0px black) !important;
+  scale: 1.1;
 }
 .imgr,
 .imgr2 {
-  
   user-select: none;
   overflow: hidden;
   filter: drop-shadow(20px 4px rgba(var(--secondary-color), 0.05));
@@ -137,12 +174,9 @@ h3 {
   user-select: none;
   transition: all 1.5s;
   /*  */
-  font-family:"Oswald", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
-/* .nam:hover {
-  color: salmon;
-} */
 .sec {
   height: 100vh;
   position: relataive;
@@ -180,7 +214,7 @@ h3 {
   align-items: center;
   transition: all 0.5s;
 }
-.imgr2{
+.imgr2 {
   transition: all 0.5s;
   height: 29vw;
 }
@@ -247,7 +281,7 @@ h3 {
   height: 120vh;
   position: relative;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 .nw {
@@ -286,20 +320,19 @@ h3 {
 .stack {
   transition: all 0.5s;
 }
-.thanks{
+.thanks {
   overflow: hidden;
   padding: 20px;
   display: flex;
   margin-left: 5vw;
-    width: 30%;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  
+  width: 30%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 @media screen and (max-width: 722px) {
-  .thanks{
-    display:none;
+  .thanks {
+    display: none;
   }
   .box {
     width: 70%;
@@ -311,13 +344,12 @@ h3 {
     height: 65vh;
     margin-right: -20px;
   }
- 
+
   .abouttxt {
     font-size: 1.5rem;
     overflow: hidden;
   }
 
- 
   .procon {
     margin-bottom: 15px;
     width: 90vw;
@@ -325,29 +357,35 @@ h3 {
   }
 }
 
-
-.titl{
+.titl {
   margin-block: 4px;
 }
 
 .titl h3 {
   color: #fff;
   overflow: hidden;
-  border-right: .19em solid rgb(0, 213, 255); 
-  white-space: nowrap; 
+  border-right: 0.19em solid rgb(0, 213, 255);
+  white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .15em; 
-  animation: 
-    typing 2.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+  letter-spacing: 0.15em;
+  animation: typing 2.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-} 
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(0, 255, 238) }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(0, 255, 238);
+  }
 }
