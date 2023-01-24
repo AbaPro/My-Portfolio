@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8" />
-
   <title> Abanob's Portfolio </title>
   <link rel="icon" href="Assets/bar.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +13,14 @@
 </head>
 
 <body>
-  <img id="dark-icon" style="z-index: 1; border-radius: 100%; position: fixed; left: 4%; bottom: 4%;" width="7%"
-    src="https://cdn3.iconfinder.com/data/icons/ios-edge-glyph-2/25/Brightness-512.png"></img>
 
+  <div id="loader" class="loading">
+    <h1 class="loadtitl">Loading...</h1>
+    <img src="Assets/spin.gif" class="preloader">
+  </div>
+
+  <img id="dark-icon" style="z-index: 1; border-radius: 100%; position: fixed; left: 4%; bottom: 4%;" width="50px"
+    src="Assets/darkmode.png"></img>
   <div class="full">
     <div class="nav">
       <a class="itm bi" href="#home" style="margin-left: 10px;">Home</a>
@@ -218,26 +222,22 @@
         <div class="form-group">
           <div class="form-row">
             <div class="col">
-              <input type="text" name="name" class="form-control my-2" placeholder="Full Name" required>
+              <input type="text" name="name" class="form-control my-1" placeholder="Full Name" required>
             </div>
             <div class="col">
-              <input type="email" name="email" class="form-control my-2" placeholder="Email Address" required>
+              <input type="email" name="email" class="form-control my-1" placeholder="Email Address" required>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <textarea placeholder="Your Message" class="form-control my-2" name="message" rows="10" required></textarea>
+          <textarea placeholder="Your Message" class="form-control my-1" name="message" rows="10" required></textarea>
         </div>
         <button type="submit" class="btn btn-sm btn-dark btn-block mb-5">Send Message</button>
       </form>
     </div>
     <br>
 
-
-
   </section>
-
-
 
 
   <script src="Scripts/script.js"></script>
